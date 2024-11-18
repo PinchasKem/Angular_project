@@ -6,7 +6,7 @@ app = FastAPI()
 
 
 @app.get("/", response_class={})
-async def wellcom():
+async def welcome():
     return "hello world"
 
 
