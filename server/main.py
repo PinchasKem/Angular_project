@@ -1,13 +1,14 @@
-from fastapi import FastAPI, Request, Response
+from fastapi import FastAPI
+import sqlalchemy
 import uvicorn
 
 
 app = FastAPI()
 
 
-@app.get("/", response_class={})
+@app.get("/")
 async def welcome():
-    return "hello world"
+    return {"hello": "hello world"}
 
 
 if __name__ == "__main__":
